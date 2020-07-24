@@ -1,0 +1,288 @@
+a {
+	color: $link-color;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:visited {
+	color: lighten($link-color, 5%);
+}
+a:hover {
+	color: darken($link-color, 5%);
+}
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5 {
+	margin: 0;
+	padding: 0;
+	color: #222;
+	font-family: $body-font;
+	font-weight: normal;
+	color: $link-color;
+}
+h1, .h1 {
+	font-size: 29px;
+	line-height: 120%;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+h2, .h2 {
+	font-size: 24px;
+	line-height: 120%;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000000;
+}
+h3, .h3 {
+	font-size: 20px;
+	letter-spacing: -1px;
+}
+h4, .h4 {
+	font-size: 18px;
+}
+h5, .h5 {
+	font-size: 16px;
+}
+p {
+	margin: 10px 0;
+}
+body {
+	font-size: 16px;
+}
+.hidden {
+	display: none;
+}
+.ohide {
+	overflow: hidden;
+}
+.wrap {
+	padding: 0;
+	margin: 0 15px;
+	width: auto;
+}
+.center {
+	text-align: center;
+}
+.orange {
+	color: $link-color;
+}
+.form_error {
+	font-size: 16px;
+	color: #c00;
+}
+.ico {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+img {
+	max-width: 100%;
+}
+
+.form-utp {
+	width: 356px;
+	.left {
+		float: left;
+		width: 50%;
+		padding-right: 10px;
+		margin-bottom: 20px;
+	}
+	.right {
+		float: right;
+		width: 50%;
+		padding-left: 10px;
+		margin-bottom: 20px;
+	}
+	.button {
+		width: 100%;
+	}
+	.agree {
+		font-size: 13px;
+		padding: 0 0 10px 0;
+		a {
+			color: $body-color;
+			text-decoration: underline;
+			&:hover {
+				color: $link-color;
+			}
+		}
+	}
+}
+
+header {
+	background: #46B1FF;
+	color: #ffffff;
+	padding: 0;
+	font-size: 14px;
+	line-height: 14px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 10;
+	a, a:visited {
+		color: #ffffff;
+		text-decoration: none;
+		&:hover {
+			color: #ffffff;
+		}
+	}
+	.wrap {
+		padding: 5px 15px 6px 15px;
+		position: relative;
+	}
+	.right {
+		float: right;
+		.login {
+			margin-right: 2em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.language {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			&:after {
+				display: inline-block;
+				width: 7px;
+				height: 7px;
+				border-bottom: 2px solid #fff;
+				border-right: 2px solid #fff;
+				transform: rotate(45deg);
+				margin-left: 0.3em;
+				margin-top: 0.2em;
+				content: '';
+				vertical-align: top;
+			}
+			&.active {
+				.lang-list {
+					display:  block;
+				}
+			}
+			.lang-list {
+				position: absolute;
+				top: 24px;
+				right: 0;
+				min-width: 150px;
+				background: #46B1FF;
+				display: none;
+				a {
+					display: block;
+					padding: 10px 10px;
+					text-align: right;
+					&:hover {
+						background-color: darken(#46B1FF, 5%);
+					}
+				}
+			}
+		}
+	}
+	.kb {
+		margin-right: 1em;
+	}
+	.phone {
+		.ibg-phone {
+			width: 20px;
+			height: 20px;
+			margin-right: 0.5em;
+		}
+	}
+}
+
+main {
+	padding-top: 30px;
+	.top {
+		.logo {
+			img {
+				width: 118px;
+				height: 118px;
+			}
+			.dark {
+				display: block;
+				margin: 20px auto;
+				text-align: center;
+			}
+			.white {
+				display: none;
+			}
+		}
+		.links {
+			text-align: right;
+			display: none;
+			a {
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	
+	.utp {
+		padding-bottom: 280px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 280px;
+			background: url(img/main.jpg) top center;
+			background-size: cover;
+		}
+		.h1 {
+			text-align: center;
+			margin-bottom: 0px;
+		}
+		.sub-head {
+			width: 250px;
+			margin: 0 auto;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 140%;
+			margin-bottom: 15px;
+		}
+		.description {
+			font-size: 14px;
+			line-height: 140%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+	
+	.try-it-form {
+		background: #F5F5F5;
+		padding: 50px 0;
+		text-align: center;
+		color: #78797A;
+		.h2 {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		form {
+			width: 265px;
+			margin: 25px auto 0 auto;
+			.form-line {
+				padding: 3px 0;
+				text-align: center;
+				input, button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	
+}
+

@@ -1,0 +1,31 @@
+{
+  "name": "vulkpack",
+  "version": "1.0.0",
+  "description": "generate css & js for develop",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vulk",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-gm": "0.0.9",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "imagemin-jpegoptim": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^6.0.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

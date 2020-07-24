@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'LetoSans';
+    src: local('LetoSans Bold'), url('../fonts/letosanscondensed-bold.woff') format('woff'), url('../fonts/letosans-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LetoSansCondensed';
+    src: local('LetoSansCondensed Bold'), url('../fonts/letosanscondensed-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LetoSansCondensed';
+    src: local('LetoSansCondensed'), url('../fonts/letosanscondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

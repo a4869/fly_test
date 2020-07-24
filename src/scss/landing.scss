@@ -1,0 +1,49 @@
+$body-font: 	'LetoSansCondensed';
+$body-bg:		#FFFFFF;
+$body-color:	#000000;
+$body-size:		14px;
+
+$link-color:	#FE6D2E;
+
+$orangedark:	#FF6C2C;
+$orange:		#FFBC9A;
+
+$bluedark:	    #003B73;
+$bluelight:	    #46B1FF;
+
+$graylight:		#F4F4F4;
+$gray:			#939292;
+$black:			#000000;
+$dark:			#161414;
+$red:			#E10000;
+
+
+// самый минимальный размер экрана
+$screen-min:	320px;
+// телефоны
+$screen-xs:		480px;
+// планшеты
+$screen-sm:		750px;
+// обычный монитор
+$screen-md:		970px;
+// Широкий монитор
+$screen-lg:		1170px;
+// Full HD
+$screen-xl:		1920px;
+
+// ширина отступа
+$wrap-margin:	15px;
+
+
+@import "landing/fonts.scss";
+@import "landing/normalize.scss";
+@import "landing/popup.scss";
+@import "landing/ibg.scss";
+
+@import "landing/standard.scss";
+@import "landing/inputs.scss";
+@import "landing/style.scss";
+@import "landing/style480.scss";
+@import "landing/style750.scss";
+@import "landing/style970.scss";
+@import "landing/style1130.scss";

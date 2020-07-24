@@ -1,0 +1,17 @@
+@media (min-width: $screen-lg){
+
+.wrap {
+	width: $screen-lg - $wrap-margin*2;
+}
+h1, .h1 {
+	font-size: 48px;
+}
+h2, .h2 {
+	font-size: 36px;
+}
+h3, .h3 {
+	font-size: 30px;
+}
+
+
+}

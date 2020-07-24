@@ -1,0 +1,26 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+	font-family: $body-font;
+	font-size: $body-size;
+	color: $body-color;
+	min-width: 320px;
+	background: $body-bg;
+	margin: 0;
+	padding: 0;
+}
+td {
+	font-family: $body-font;
+	font-size: $body-size;
+}
+.clearfix {
+	&:before, &:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+.rel {
+	position: relative;
+}

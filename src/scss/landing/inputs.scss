@@ -1,0 +1,377 @@
+$input-font: $body-font;
+
+$input-side-padding: 25px;
+$input-height: 48px;
+$input-border-width: 0px;
+
+// цвет текста полей ввода
+$input-text-color: $body-color;
+// цвет фона полей ввода
+$input-bg-color: #ffffff;
+// цвет границ полей ввода
+$input-border-color: #E9E5E2;
+
+// цвет текста на кнопках
+$input-button-text-color: #ffffff;
+// цвет фона кнопок
+$input-button-bg-color: $link-color;
+// цвет границы кнопки
+$input-button-border-color: $link-color;
+
+// текст кнопки при наведении при наведении
+$input-button-text-color-hover: lighten($input-button-text-color, 10%);
+// фон кнопки при наведении
+$input-button-bg-color-hover: darken($input-button-bg-color, 10%);
+// граница кнопки при наведении
+$input-button-border-color-hover: darken($input-button-border-color, 10%);
+
+// текст выключенной кнопки
+$input-button-text-color-disabled: lighten($input-button-text-color, 10%);
+// фон выключенной кнопки
+$input-button-bg-color-disabled: lighten($input-button-bg-color, 10%);
+// граница выключенной кнопки
+$input-button-border-color-disabled: lighten($input-button-border-color, 10%);
+
+// цвет выключенного инпута
+$input-text-color-disabled: lighten($input-text-color, 10%);
+// фон выключенного инпута
+$input-bg-color-disabled: darken($input-bg-color, 10%);
+// граница выключенного инпута
+$input-border-color-disabled: lighten($input-border-color, 10%);
+
+// цвет галочки в чекбосе
+$input-check-color: $input-text-color;
+$input-check-svgfill: 'FE6D2E';
+// цвет стрелки селекта
+$input-select-svgfill: '222';
+
+@mixin input-button() {
+	display: inline-block;
+	width: auto;
+    vertical-align: top;
+    padding: 0px 20px 0 20px;
+    background-color: $input-button-bg-color;
+    border: none;
+    color: $input-button-text-color;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+@mixin input-button-hover() {
+	color: $input-button-text-color-hover;
+	background: $input-button-bg-color-hover;
+	text-decoration: none;
+	transition: 0.1s;
+}
+@mixin input-button-active() {
+	color: $input-button-text-color-hover;
+	transition: 0.1s;
+}
+
+@mixin input-field() {
+	width: 100%;
+    border: none;
+    border-bottom: $input-border-width solid $input-border-color;
+    vertical-align: top;
+    border-radius: 8px;
+    padding: 4px $input-side-padding 0 $input-side-padding;
+    background: $input-bg-color;
+    color: $input-text-color;
+    font-size: 17px;
+}
+
+input,
+a.button
+textarea,
+select,
+button
+{
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    outline: none;
+    font-family: $input-font;
+}
+
+input,
+select,
+button,
+a.button,
+input[type=file] + span
+{
+    height: $input-height;
+}
+
+a.button {
+	line-height: $input-height;
+	&.transparent {
+		background-color: transparent;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+input,
+textarea,
+select,
+input[type=file] + span
+{
+   @include input-field;
+}
+textarea {
+    height: 120px;
+    padding: 15px $input-side-padding;
+    line-height: normal;
+    resize: none;
+}
+
+.ico:active {
+	&:before {
+		color: #222222;
+	}
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+a.button
+{
+    @include input-button;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover,
+a.button:hover
+{
+    @include input-button-hover;
+}
+
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active,
+button:active,
+a.button:active
+{
+    @include input-button-active;
+}
+
+::-webkit-textfield-decoration-container {
+	height: $input-height;
+}
+::-webkit-inner-spin-button {
+}
+::-webkit-outer-spin-button {
+}
+
+/* checkbox, radiobutton */
+input[type=checkbox],
+input[type=radio],
+label input[type=checkbox] + span:before,
+label input[type=radio] + span:before
+{
+    display: inline-block;
+    padding: 0;
+    height: 13px;
+    width: 13px;
+    border-radius: 0px;
+    border: $input-border-width solid $input-border-color;
+    vertical-align: top;
+}
+label input[type=checkbox] + span,
+label input[type=radio] + span {
+	padding-left: 15px;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+label input[type=checkbox] + span:before,
+label input[type=radio] + span:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input[type=radio],
+label input[type=radio] + span:before {
+	border-radius: 50%;
+}
+input[type=radio]:checked,
+label input[type=radio]:checked + span:before {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3E%3C/title%3E%3Ccircle r='4' cy='4' cx='4' fill='%23#{$input-check-svgfill}'/%3E%3C/g%3E%3C/svg%3E");
+}
+input[type=checkbox]:checked,
+label input[type=checkbox]:checked + span:before {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80%;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='10' viewBox='0 0 10 10' x='0px' y='0px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23#{$input-check-svgfill}' d='M 3.72404 5.79901L 1.767 3.84301L -5.43595e-08 5.61099L 4.04302 9.65402L 9.90105 1.45299L 7.86601 4.86375e-08L 3.72404 5.79901Z'/%3E%3C/svg%3E");
+}
+::-ms-check {
+    color: $input-check-color;
+    border: $input-border-width solid $input-border-color;
+}
+
+
+label > input[type=checkbox],
+label > input[type=radio] {
+	display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+/* select */
+select {
+	background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cpath fill='%23#{$input-check-svgfill}' d='M220.088,57.667l-99.671,99.695L20.746,57.655c-4.752-4.752-12.439-4.752-17.191,0c-4.74,4.752-4.74,12.451,0,17.203l108.261,108.297l0,0l0,0c4.74,4.752,12.439,4.752,17.179,0L237.256,74.859c4.74-4.752,4.74-12.463,0-17.215C232.528,52.915,224.828,52.915,220.088,57.667z'/%3E%3C/svg%3E");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: top 50% right 10px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: $input-height;
+}
+select::-ms-expand {
+    display: none;
+}
+select option {
+    padding: inherit;
+}
+
+
+
+/* file */
+input[type=file] {
+	padding: 0;
+	position: relative;
+}
+input[type=file] + span {
+	line-height: $input-height - $input-border-width * 2;
+}
+
+::-ms-browse {
+    @include input-button;
+    border-radius: 0;
+    box-sizing: border-box;
+    height: inherit;
+    -ms-appearance: none;
+}
+::-ms-browse:hover {
+	@include input-button-hover;
+}
+input[type=file][disabled]::-ms-browse,
+input[type=file][disabled]::-ms-browse:hover {
+	color: $input-button-text-color-disabled;
+    background-color: $input-button-bg-color-disabled;
+    border-color: $input-button-border-color-disabled;
+	cursor: default;
+}
+::-webkit-file-upload-button {
+    @include input-button;
+    border-radius: 0;
+    box-sizing: border-box;
+    height: inherit;
+    -webkit-appearance: none;
+    position: absolute;
+    top: $input-border-width * (-1);
+    left: $input-border-width * (-1);
+}
+::-webkit-file-upload-button:hover {
+    @include input-button-hover;
+}
+input[type=file][disabled]::-webkit-file-upload-button,
+input[type=file][disabled]::-webkit-file-upload-button:hover {
+	color: $input-button-text-color-disabled;
+    background-color: $input-button-bg-color-disabled;
+    border-color: $input-button-border-color-disabled;
+	cursor: default;
+}
+
+label input[type=file] {
+    display: none;
+}
+label input[type=file] + span {
+    display: block;
+    position: relative;
+}
+label input[type=file] + span b {
+    font-weight: normal;
+}
+label input[type=file] + span a.button {
+    position: absolute;
+    top: $input-border-width * (-1);
+    right: $input-border-width * (-1);
+    height: inherit;
+    box-sizing: border-box;
+    line-height: $input-height - $input-border-width * 2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+label input[type=file] + span a.button:before {
+	content: 'Обзор...';
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display:none;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* disabled inputs */
+input[disabled],
+select[disabled],
+textarea[disabled],
+label input[type=checkbox][disabled] + span:before,
+label input[type=radio][disabled] + span:before,
+label input[type=file][disabled] + span,
+label input[type=file][disabled] + span a.button
+{
+	color: $input-text-color-disabled;
+	background-color: $input-bg-color-disabled;
+	border-color: $input-border-color-disabled;
+	cursor: default;
+}
+label input[type=checkbox][disabled] + span,
+label input[type=radio][disabled] + span
+{
+	color: $input-text-color-disabled;
+	cursor: default;
+}
+
+button[disabled],
+input[type=button][disabled],
+input[type=submit][disabled],
+input[type=reset][disabled],
+button[disabled],
+a.button[disabled],
+input[type=button][disabled]:hover,
+input[type=submit][disabled]:hover,
+input[type=reset][disabled]:hover,
+button[disabled]:hover,
+a.button[disabled]:hover,
+a.button.disabled,
+a.button.disabled:hover,
+label input[type=file][disabled] + span a.button
+{
+	color: $input-button-text-color-disabled;
+	background-color: $input-button-bg-color-disabled;
+	border-color: $input-button-border-color-disabled;
+	cursor: default;
+}
